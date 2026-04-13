@@ -7,10 +7,10 @@ public class Third {
             "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_=+[]{}|;:,.<>?".toCharArray();
     private static final SecureRandom random = new SecureRandom();
 
-    public static void main() {
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Введіть бажану довжину пароля: ");
+        System.out.println("Введіть бажану довжину пароля (6-20): ");
         int len = sc.nextInt();
 
         System.out.println("Ваш пароль: " + generatePassword(len));
@@ -18,8 +18,8 @@ public class Third {
 
     public static String generatePassword(int len) {
 
-        if (len < 4) {
-            throw new IllegalArgumentException("Довжина повинна бути не менше 4 символів!");
+        if (len < 4 || len > 20) {
+            throw new IllegalArgumentException("Довжина повинна бути коректною!");
         }
 
         StringBuilder password = new StringBuilder(len);

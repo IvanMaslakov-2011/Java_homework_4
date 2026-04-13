@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Second {
-    public static void main(){
+    public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Введіть число: ");
@@ -22,7 +22,7 @@ public class Second {
         if (!isPalindrome(num)){
             System.out.print("та не паліндром!");
         } else {
-            System.out.print("та паліндром! ");
+            System.out.print("та    паліндром! ");
         }
     }
 
@@ -51,7 +51,6 @@ public class Second {
     }
 
     public static boolean isPalindrome(int num){
-        boolean isPalindrome;
 
         if (num < 0){
             return false;
