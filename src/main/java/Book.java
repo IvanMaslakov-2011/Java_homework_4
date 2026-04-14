@@ -1,6 +1,6 @@
 public class Book {
 
-    public static void main(){
+    public static void main(String[] args){
         Book book1 = new Book("The Chronicles of Narnia", "C.S. Lewis", 1950, 800);
         Book book2 = new Book("The Lord of the Rings", " John R. R. Tolkien", 1954, 1200);
 
