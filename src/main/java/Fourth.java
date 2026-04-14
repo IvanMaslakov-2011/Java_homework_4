@@ -17,12 +17,12 @@ public class Fourth {
         }
     }
 
-    public static void printFibonacci(int n){
+    public static void printFibonacci(int n) {
 
         int a = 0;
         int b = 1;
 
-        for (int i = 0; i < n; i++){
+        for (int i = 0; i < n; i++) {
             System.out.print(a + ", ");
 
             int temp = a;
@@ -33,21 +33,21 @@ public class Fourth {
         }
     }
 
-    public static long factorial(int n){
+    public static long factorial(int n) {
         long res = 1;
 
-        for (int i = 1; i <= n; i++){
+        for (int i = 1; i <= n; i++) {
             res *= i;
         }
 
         return res;
     }
 
-    public static int sumOfDigits(int n){
+    public static int sumOfDigits(int n) {
 
         int sum = 0;
 
-        while (n > 0){
+        while (n > 0) {
 
             int lastNum = n % 10;
 

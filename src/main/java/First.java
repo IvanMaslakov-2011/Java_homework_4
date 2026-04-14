@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class First {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Введіть номер фігури площу якої ви хочете обчислити:\n1 - Квадрат;\n2 - Прямокутник;\n3 - Трикутник;\n4 - Коло;");
@@ -9,19 +9,19 @@ public class First {
         boolean correctValue = false;
 
 
-        switch (shape){
+        switch (shape) {
             case 1:
                 while (!correctValue) {
                     System.out.println("Введіть довжину сторони: ");
                     int squareLength = sc.nextInt();
-                    if (squareLength > 0){
+                    if (squareLength > 0) {
                         squareArea(squareLength);
                         correctValue = true;
                     } else {
                         System.out.println("Введіть коректне значення!");
                     }
                 }
-            break;
+                break;
 
             case 2:
                 while (!correctValue) {
@@ -69,19 +69,19 @@ public class First {
         }
     }
 
-    public static void squareArea(int length){
+    public static void squareArea(int length) {
         System.out.println("Площа квадрата дорівнює: " + (length * length));
     }
 
-    public static void rectangleArea(int length, int width){
+    public static void rectangleArea(int length, int width) {
         System.out.println("Площа прямокутника дорівнює: " + (length * width));
     }
 
-    public static void triangleArea(int base, int height){
+    public static void triangleArea(int base, int height) {
         System.out.println("Площа трикутника дорівнює: " + ((base * height) / 2));
     }
 
-    public static void circleArea(int radius){
+    public static void circleArea(int radius) {
         System.out.println("Площа круга дорівнює: " + ((radius * radius)) * Math.PI);
     }
 }
