@@ -9,7 +9,7 @@ public class Time {
 
         time1.addSeconds(3665);
 
-        time1.display12HoutFormat();
+        time1.display12HourFormat();
     }
 
     public Time(int hour, int minute, int second) {
@@ -70,7 +70,7 @@ public class Time {
         }
     }
 
-    public void display12HoutFormat(){
+    public void display12HourFormat(){
        int h = (hour % 12 == 0) ? 12 : hour % 12;
        String period = (hour < 12) ? "AM" : "PM";
 
