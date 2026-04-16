@@ -41,7 +41,9 @@ class libraryBook {
 
 public class Library {
 
-    public static void main(String[] args){
+    private ArrayList<libraryBook> books = new ArrayList<libraryBook>();
+
+    public static void main(String[] args) {
         Library library1 = new Library();
 
         libraryBook book1 = new libraryBook("The Chronicles of Narnia", "C.S. Lewis", 1950, 800, true);
@@ -65,8 +67,6 @@ public class Library {
         library1.listAvailableBooks();
     }
 
-    private ArrayList<libraryBook> books = new ArrayList<libraryBook>();
-
     public void addBook(libraryBook book) {
         books.add(book);
     }
@@ -75,15 +75,14 @@ public class Library {
         for (int i = 0; i < books.size(); i++) {
             libraryBook currentBook = books.get(i);
 
-                if (currentBook.getTitle().equals(title)) {
+            if (currentBook.getTitle().equals(title)) {
 
-                    if (currentBook.getAvailable()) {
-                        currentBook.setAvailable(false);
-                    }
-                    else {
+                if (currentBook.getAvailable()) {
+                    currentBook.setAvailable(false);
+                } else {
                     System.out.println("Вибачте книга недоступна!");
                 }
-                    return;
+                return;
             }
         }
         System.out.println("Вибачте, але книги " + title + " не має у нашій бібліотеці!");
@@ -109,17 +108,17 @@ public class Library {
 
         for (int i = 0; i < books.size(); i++) {
 
-            if(books.get(i).getAvailable()){
-                System.out.println( (i + 1) + ". Книга: " + books.get(i).getTitle());
+            if (books.get(i).getAvailable()) {
+                System.out.println((i + 1) + ". Книга: " + books.get(i).getTitle());
             }
         }
     }
 
     public libraryBook findBookByTitle(String title) {
-        for (int i = 0; i < books.size(); i++){
+        for (int i = 0; i < books.size(); i++) {
             libraryBook currentBook = books.get(i);
 
-            if (currentBook.getTitle().equals(title)){
+            if (currentBook.getTitle().equals(title)) {
                 return currentBook;
             }
         }
