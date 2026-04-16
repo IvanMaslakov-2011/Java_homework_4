@@ -40,6 +40,7 @@ public class CinemaHall {
     private int rows;
     private int seatsPerRow;
     private Seat[][] seats;
+
     public CinemaHall(int rows, int seatsPerRow) {
         setRows(rows);
         setSeatsPerRow(seatsPerRow);
