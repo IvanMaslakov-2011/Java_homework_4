@@ -4,7 +4,13 @@ public class Time {
     private int minute;
     private int second;
 
-    public static void main(String[] args){
+    public Time(int hour, int minute, int second) {
+        setHour(hour);
+        setMinute(minute);
+        setSecond(second);
+    }
+
+    public static void main(String[] args) {
         Time time1 = new Time(10, 15, 30);
 
         time1.addSeconds(3665);
@@ -12,10 +18,8 @@ public class Time {
         time1.display12HourFormat();
     }
 
-    public Time(int hour, int minute, int second) {
-        setHour(hour);
-        setMinute(minute);
-        setSecond(second);
+    public int getHour() {
+        return hour;
     }
 
     public void setHour(int hour) {
@@ -26,6 +30,10 @@ public class Time {
         }
     }
 
+    public int getMinute() {
+        return minute;
+    }
+
     public void setMinute(int minute) {
         if (minute >= 0 && minute <= 59) {
             this.minute = minute;
@@ -34,24 +42,16 @@ public class Time {
         }
     }
 
+    public int getSecond() {
+        return second;
+    }
+
     public void setSecond(int second) {
         if (second >= 0 && second <= 59) {
             this.second = second;
         } else {
             throw new IllegalArgumentException("Секунда не може бути менше 0 чи більше 59!");
         }
-    }
-
-    public int getHour(){
-        return hour;
-    }
-
-    public int getMinute() {
-        return minute;
-    }
-
-    public int getSecond() {
-        return second;
     }
 
     public void addSeconds(int sec) {
@@ -70,9 +70,9 @@ public class Time {
         }
     }
 
-    public void display12HourFormat(){
-       int h = (hour % 12 == 0) ? 12 : hour % 12;
-       String period = (hour < 12) ? "AM" : "PM";
+    public void display12HourFormat() {
+        int h = (hour % 12 == 0) ? 12 : hour % 12;
+        String period = (hour < 12) ? "AM" : "PM";
 
         System.out.printf("%02d:%02d:%02d %s%n", h, minute, second, period);
     }
