@@ -1,6 +1,5 @@
 import java.security.SecureRandom;
 import java.util.Scanner;
-
 public class Third {
 
     private static final char[] SYMBOLS =
